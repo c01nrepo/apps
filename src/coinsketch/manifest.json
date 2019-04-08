@@ -1,0 +1,10 @@
+{
+	"name":"Coin Sketch",
+	"desc":"Use C01N as a simple Etch a sketch",
+	"tags":["games"],
+	"author":"ragulbalaji",
+	"version":"190319",
+	"pkg":"coinsketch",
+	"start":"coinsketch",
+	"pubEpoch": 1552953600
+}

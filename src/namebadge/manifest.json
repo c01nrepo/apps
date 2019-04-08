@@ -1,0 +1,10 @@
+{
+	"name":"Name Badge",
+	"desc":"Large text scroller for use as name tag/badge",
+	"tags":["utility"],
+	"author":"ragulbalaji",
+	"version":"190319",
+	"pkg":"namebadge",
+	"start":"name",
+	"pubEpoch": 1552953600
+}

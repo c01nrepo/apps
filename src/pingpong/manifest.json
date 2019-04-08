@@ -1,0 +1,10 @@
+{
+	"name":"Ping Pong",
+	"desc":"Play the classic PONG",
+	"tags":["games"],
+	"author":"ragulbalaji",
+	"version":"190319",
+	"pkg":"pingpong",
+	"start":"pingpong",
+	"pubEpoch": 1552953600
+}
