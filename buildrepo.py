@@ -50,8 +50,8 @@ def app_start():
 		if 'manifest.json' in files:
 			manifest = json.load(open('./%s/manifest.json'%root))
 			print('Packing 📦 %s %s'%(manifest['name'], manifest['version']))
-			make_tgzfile(root, './pkg/%s.tgz'%manifest['pkg'])
-			manifest['url'] = 'pkg/%s.tgz'%manifest['pkg']
+			make_tgzfile(root, './pkg/%s%s.tgz'%(manifest['pkg'],manifest['version']))
+			manifest['url'] = 'pkg/%s%s.tgz'%(manifest['pkg'],manifest['version'])
 			listing['apps'].append(manifest)
 
 	# Write Listings
