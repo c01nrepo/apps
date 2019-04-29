@@ -26,6 +26,7 @@ import os
 import json
 import hashlib
 import sys
+import time
 from datetime import datetime
 
 def sha256(filename):
@@ -52,6 +53,8 @@ def app_start():
 		'apps':[]
 	}
 
+	MANIFEST_REQUIREMENTS = ['name', 'desc', 'tags', 'author', 'version', 'pkg', 'start', 'pubEpoch', 'url', 'sha256']
+
 	if os.path.exists('./pkg'): # Clear old pkgs
 		import shutil
 		shutil.rmtree('./pkg')
@@ -68,10 +71,24 @@ def app_start():
 			manifest['url'] = output_filename
 			manifest['sha256'] = sha256(output_filename)
 			listing['apps'].append(manifest)
+			for r in MANIFEST_REQUIREMENTS:
+				if r not in manifest:
+					print('⚠️  Requirement "%s" not satisfied in pkg "%s"'%(r, manifest['pkg']))
+					time.sleep(5) # Delay to show error
+
+	UNQIUE_REQUIREMENTS = ['name', 'pkg', 'url', 'sha256']
+	for r in UNQIUE_REQUIREMENTS:
+		checkUnique = {}
+		for manifest in listing['apps']:
+			if manifest[r] in checkUnique.keys():
+				print('☢️  Check of unique requirement "%s" failed!\n😡  Conflict between packages "%s" and "%s"'%(r,manifest['pkg'],checkUnique[manifest[r]]))
+				time.sleep(5) # Delay to show error
+			else:
+				checkUnique[manifest[r]] = manifest['pkg']
 
 	# Write Listings
 	json.dump(listing, open('./listing.json','w'))
-	print('\nlisting.json', listing)
+	print('\n✏️  listing.json written.')
 
 	# TODO Categories
 
