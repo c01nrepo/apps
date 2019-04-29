@@ -1,0 +1,10 @@
+{
+	"name":"Checkers",
+	"desc":"Play checkers",
+	"tags":["games"],
+	"author":"jiefeng",
+	"version":"190429",
+	"pkg":"checkers",
+	"start":"checkers",
+	"pubEpoch": 1552953600
+}
