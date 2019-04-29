@@ -14,5 +14,3 @@ def app_start():
 	oled.hctext('[B] to Quit',56,1)
 	oled.show()
 	while btn.B.value(): sleep_ms(20)
-
-app_start()
