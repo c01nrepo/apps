@@ -1,0 +1,10 @@
+{
+	"name":"SG Weather",
+	"desc":"Enviromental data from data.gov.sg",
+	"tags":["utility"],
+	"author":"jiefeng",
+	"version":"190429",
+	"pkg":"sgenvironment",
+	"start":"environment",
+	"pubEpoch": 1555064808
+}
