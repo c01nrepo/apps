@@ -1,0 +1,10 @@
+{
+	"name":"Hello World",
+	"desc":"Basic App",
+	"tags":[""],
+	"author":"ragulbalaji",
+	"version":"190429",
+	"pkg":"helloworld",
+	"start":"hello",
+	"pubEpoch": 1556515018
+}

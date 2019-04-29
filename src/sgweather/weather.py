@@ -46,6 +46,6 @@ def app_start():
 	forecasts = []
 	for area in d2['items'][0]['forecasts']: forecasts.extend([area['area'][:16],area['forecast'][:16],''])
 	sid = 0
-	while True: 
+	while True:
 		sid = selectVList('2 Hour Nowcast',forecasts,sid,1)
 		if sid == -1: return 0
