@@ -63,8 +63,8 @@ def app_start():
 		if 'manifest.json' in files:
 			manifest = json.load(open('./%s/manifest.json'%root))
 			print('Packing 📦 %s %s'%(manifest['name'], manifest['version']))
-			output_filename = './pkg/%s-%s.tgz'%(manifest['pkg'],manifest['version'])
-			make_tgzfile(root, output_filename)
+			output_filename = 'pkg/%s-%s.tgz'%(manifest['pkg'],manifest['version'])
+			make_tgzfile(root, './'+output_filename)
 			manifest['url'] = output_filename
 			manifest['sha256'] = sha256(output_filename)
 			listing['apps'].append(manifest)
