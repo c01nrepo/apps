@@ -36,5 +36,3 @@ def app_start():
 		if ball[0] < ball[4]:
 			ball[2] *= -0.9
 			ball[0] = ball[4]
-
-app_start()
