@@ -1,0 +1,10 @@
+{
+	"name":"Game of Life",
+	"desc":"well known cellular automaton",
+	"tags":["games"],
+	"author":"jiefeng",
+	"version":"191106",
+	"pkg":"gameoflife",
+	"start":"gameoflife",
+	"pubEpoch": 1573050878
+}
