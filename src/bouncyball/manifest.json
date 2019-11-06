@@ -1,0 +1,10 @@
+{
+	"name":"Bouncy Ball",
+	"desc":"Who doesn't like a bouncy boi!",
+	"tags":["games"],
+	"author":"ragulbalaji",
+	"version":"191106",
+	"pkg":"bouncyball",
+	"start":"ball",
+	"pubEpoch": 1573044941
+}
