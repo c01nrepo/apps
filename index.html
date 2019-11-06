@@ -1,0 +1,25 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap');
+*{ font-family: 'IBM Plex Mono', monospace; }   
+</style>
+
+<h1>C01N App Repository</h1>
+<h4>Government Technology Agency 2019</h4>
+
+<dl id='appslist'>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+</dl>
+
+<script>
+  const appslist = document.getElementById('appslist')
+  fetch('listing.json').then((r) => {
+    return r.json()
+  }).then((l) => {
+    appslist.innerHTML = ''
+    appslist.innerHTML += '<dt>Repository Metadata</dt><dd>Fetched '+Date()+'</dd><dd>Version '+l.version+'</dd><dd>'+l.apps.length+' Apps Avaliable</dd>'
+    for(app of l.apps){
+      appslist.innerHTML += '<br><dt><a href="'+app.url+'">'+app.name+'</a></dt><dd>'+app.desc+'</dd><dd>Author: '+app.author+'</dd><dd>Version: '+app.version+'</dd>'
+    }
+  })
+</script>
