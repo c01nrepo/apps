@@ -1,0 +1,10 @@
+{
+	"name":"Sprite Rain",
+	"desc":"Test of loading and manipulating sprites",
+	"tags":[""],
+	"author":"ragulbalaji",
+	"version":"200606",
+	"pkg":"spritetest",
+	"start":"rain",
+	"pubEpoch": 1591450959
+}
