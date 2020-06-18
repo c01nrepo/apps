@@ -69,7 +69,7 @@ def app_start():
 			output_filename = 'pkg/%s-%s.tgz'%(manifest['pkg'],manifest['version'])
 			make_tgzfile(root, './'+output_filename)
 			manifest['url'] = output_filename
-			manifest['sha256'] = sha256(output_filename)
+			manifest['sha256'] = sha256(output_filename)[:8]
 			listing['apps'].append(manifest)
 			for r in MANIFEST_REQUIREMENTS:
 				if r not in manifest:
